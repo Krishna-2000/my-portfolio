@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
+    <style>
+      /* Apply background image globally */
+      .app-background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('./background.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      /* Make sure #root takes full size */
+      #root {
+        position: relative;
+        z-index: 1; /* Ensure content is above the background */
+        min-height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="app-background">
+      <div id="root"></div> <!-- React app mounts here -->
+    </div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+
+  .hero-content {
+    padding-top: 20px;
+    color: beige;
+    text-align: center;
+    font-weight: bold;
+    line-height: 1.2;
+    text-transform: uppercase;
+    text-shadow: 6px 6px 15px rgba(0, 0, 0, 0.8); /* Bigger shadow */
+  }
+  
+  /* Main heading */
+  .hero h1 {
+    font-size: 60px;
+    font-weight: bold;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+  
+  /* Name Styling */
+  .highlight {
+    font-size: 70px;
+    font-weight: bold;
+    display: block;
+  }
+
+  
+  /* Button */
+  .btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: 2px solid #9e1e04;
+    color: beige;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    text-shadow: 6px 6px 15px rgba(0, 0, 0, 0.8); /* Bigger shadow */
+
+  }
+  
+  .btn:hover {
+    background-color: #9e1e04;
+    color: beige;
+  }
+  
+  
