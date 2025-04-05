@@ -1,6 +1,31 @@
 import "./Contact.css";
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 export default function Contact() {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    console.log('here');
+    emailjs
+      .sendForm(
+        "service_2i91l2n", // 👈 Replace with your actual Service ID
+        "template_oobrdri", // 👈 Replace with your actual Template ID
+        form.current,
+        "b2F23fssF261T--3b" // 👈 Replace with your actual Public Key
+      )
+      .then(
+        (result) => {
+          alert("Message sent successfully!");
+          form.current.reset();
+        },
+        (error) => {
+          alert("Something went wrong, try again.");
+          console.error(error);
+        }
+      );
+  };
   return (
     <div className="contact-container">
       {/* Left Section */}
@@ -18,15 +43,15 @@ export default function Contact() {
       </div>
 
       {/* Right Section - Contact Form */}
-      <div className="contact-form">
+      <form ref={form} onSubmit={sendEmail} className="contact-form">
         <div className="input-row">
-          <input type="text" placeholder="Name" />
-          <input type="email" placeholder="Email" />
+          <input type="text" name="name" placeholder="Name" />
+          <input type="email" name="email" placeholder="Email" />
         </div>
-        <input type="text" placeholder="Phone" />
-        <textarea placeholder="Message"></textarea>
+        <input type="text" placeholder="Phone" name="phone" />
+        <textarea placeholder="Message" name="message"></textarea>
         <button type="submit">Send</button>
-      </div>
+      </form>
 
       
     </div>
