@@ -9,9 +9,12 @@ function App() {
   return (
   
       <>
+          <div className="scale-wrapper">
+
       <Routes>
         <Route path="/" element={<HomePage />} />
       </Routes>
+      </div>
     </>
 
   )
