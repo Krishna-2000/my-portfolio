@@ -42,6 +42,6 @@
 }
 
 .scale-wrapper {
-  transform: scale(0.9);         /* Scale down to 90% */
+  transform: scale(0.8);         /* Scale down to 90% */
   transform-origin: top center;  /* Anchor scaling from the top center */
 }

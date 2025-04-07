@@ -111,16 +111,7 @@
     color: white;
   }
   
-  .box {
-    width: 100%;
-    background-color: rgb(245 245 220 / 32%); /* Soft transparent effect */
-    color: black;
-    padding: 40px;
-    border-radius: 15px; /* Smooth rounded edges */
-    text-align: center;
-    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25); /* More depth */
-    backdrop-filter: blur(8px);
-}
+  
 .details-view {
     position: relative; /* Keeps it centered and visible */
   
